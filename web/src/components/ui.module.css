@@ -1,0 +1,239 @@
+/* Shared primitives: page container, panels, buttons, fields, chips. */
+
+.container {
+  width: 100%;
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.pageHeader {
+  padding: 40px 0 24px;
+}
+
+.pageHeader h1 {
+  font-size: 28px;
+}
+
+.pageHeader p {
+  margin-top: 8px;
+  max-width: 720px;
+  color: var(--text-muted);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.panelBody {
+  padding: 20px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panelHeader h2,
+.panelHeader h3 {
+  font-size: 15px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 40px 0 14px;
+}
+
+.sectionTitle h2 {
+  font-size: 19px;
+}
+
+.sectionTitle p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.faint {
+  color: var(--text-faint);
+}
+
+.small {
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--surface-hover);
+  text-decoration: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}
+
+.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.danger {
+  color: var(--weak);
+}
+
+.ghost {
+  border-color: transparent;
+  background: transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--surface-sunken);
+}
+
+.buttonSmall {
+  height: 30px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.large {
+  height: 44px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+
+/* Fields */
+
+.select,
+.input {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Chips and notices */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.notice {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.warning {
+  border-color: transparent;
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.error {
+  border-color: transparent;
+  background: var(--weak-soft);
+  color: var(--weak);
+}
+
+.empty {
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* An inline list of facts separated by dots. Shifting the list left by one separator and clipping that strip hides
+   the dot before whichever item starts a line, so wrapped lines never begin with a separator. */
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--meta-gap));
+  clip-path: inset(0 0 0 var(--meta-gap));
+  color: var(--text-muted);
+  font-size: 13px;
+  --meta-gap: 17px;
+}
+
+.meta > * {
+  position: relative;
+  padding-left: var(--meta-gap);
+}
+
+.meta > *::before {
+  content: "\00b7";
+  position: absolute;
+  left: 6px;
+  color: var(--text-faint);
+}

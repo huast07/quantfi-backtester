@@ -1,0 +1,17 @@
+id: momentum-crash
+title: Momentum crash
+tier: plausible
+family: dynamics
+summary: BLUE_PEARLS' uptrend reverses sharply instead of fading.
+description: From a random time, BLUE_PEARLS drifts down at 600-1,000 a day net of its usual uptrend, with doubled
+  volatility for about 1,000 ticks.
+references: [Daniel & Moskowitz (2016)]
+modifiers:
+- kind: drift_change
+  products: [BLUE_PEARLS]
+  per_day: [-1200, -800]
+- kind: vol_window
+  products: [BLUE_PEARLS]
+  factor: 2.0
+  duration_ticks: 1000
+event_window: [0.3, 0.7]

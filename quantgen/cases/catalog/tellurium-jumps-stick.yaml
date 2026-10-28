@@ -1,0 +1,14 @@
+id: tellurium-jumps-stick
+title: TELLURIUM jumps stick
+tier: plausible
+family: dynamics
+summary: TELLURIUM's jumps are simply permanent, with no follow-through and no give-back.
+description: On the real days a typical TELLURIUM jump kept drifting its way for ~200 ticks and then gave that back,
+  and a jump bigger than usual gave most of its excess back within ~200 ticks. That response is fitted from only ~30
+  jumps, and whether prices under- or over-react to news is a long-running empirical question, so this case drops
+  it. Strategies that fade large jumps or ride the post-jump drift lose their edge.
+references: [QuantiFi Prices report (TELLURIUM jumps), 'De Bondt and Thaler (1985)', 'Jegadeesh and Titman (1993)']
+modifiers:
+- kind: scale_jumps
+  products: [TELLURIUM]
+  response_factor: 0.0

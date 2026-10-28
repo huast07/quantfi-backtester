@@ -1,0 +1,9 @@
+/out
+/.next
+/public/py
+/src/generated
+/coverage
+/test-results
+/playwright-report
+next-env.d.ts
+src/test/fixtures

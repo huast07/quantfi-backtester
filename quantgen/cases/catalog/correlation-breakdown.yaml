@@ -1,0 +1,12 @@
+id: correlation-breakdown
+title: Correlation breakdown
+tier: plausible
+family: structure
+summary: The WHITE/BLACK/BLUE pearl correlations flip sign.
+description: Hedges and pair trades built on the observed pearl correlations (WHITE-BLACK about -0.6) now add risk
+  instead of removing it.
+references: [Longin & Solnik (2001), Khandani & Lo (2007)]
+modifiers:
+- kind: change_correlation
+  products: [WHITE_PEARLS, BLACK_PEARLS, BLUE_PEARLS]
+  flip: true

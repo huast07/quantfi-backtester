@@ -1,0 +1,32 @@
+id: quant-quake
+title: Quant quake
+tier: stress
+family: stress
+summary: Every relative-value relationship breaks at once.
+description: 'From one random time: the pearl total moves by 100-250, the basket premium jumps 150-300, TOFFEE_CAKE''s
+  anchor moves 40-100, voucher IV shifts, and the pearl correlations flip.'
+references: [Khandani & Lo (2007)]
+modifiers:
+- kind: plug_total_shift
+  products: ['@plugs']
+  size: [100, 250]
+  ramp_ticks: [1, 100]
+- kind: shock
+  products: [FRUIT_BASKET]
+  size: [150, 300]
+  relative: false
+  direction: random
+  ramp_ticks: [100, 500]
+- kind: shock
+  products: [TOFFEE_CAKE]
+  size: [40, 100]
+  relative: false
+  direction: random
+  ramp_ticks: [50, 300]
+- kind: iv_shock
+  size: [-0.006, 0.006]
+  ramp_ticks: [50, 200]
+- kind: change_correlation
+  products: [WHITE_PEARLS, BLACK_PEARLS, BLUE_PEARLS]
+  flip: true
+event_window: [0.2, 0.6]

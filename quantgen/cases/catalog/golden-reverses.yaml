@@ -1,0 +1,12 @@
+id: golden-reverses
+title: GOLDEN_PEARLS reverses
+tier: plausible
+family: structure
+summary: GOLDEN_PEARLS steps up instead of down.
+description: One or two steps of the observed sizes, but upward. WHITE and BLACK absorb them in the usual shares.
+references: ['QuantiFi Prices report, open question']
+modifiers:
+- kind: set_steps
+  products: [GOLDEN_PEARLS]
+  daily_counts: [1, 2]
+  size_factor: -1.0

@@ -1,0 +1,11 @@
+id: heavy-flow
+title: Heavy flow
+tier: plausible
+family: microstructure
+summary: Taker arrival rates double on every product.
+description: More noise traders, so passive orders fill about twice as often.
+references: [Glosten & Milgrom (1985)]
+modifiers:
+- kind: scale_flow
+  products: ['@all']
+  factor: 2.0

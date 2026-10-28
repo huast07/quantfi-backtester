@@ -1,0 +1,11 @@
+id: smile-flattens
+title: Smile flattens
+tier: plausible
+family: options
+summary: The smile's curvature falls by half or more, so wing vouchers cheapen relative to at-the-money.
+description: The real days' smile is strongly curved. Here the curvature is 30-60% of that, which reprices the far
+  strikes. (The sticky-delta regime is the calibrated default, so it is covered by the regular day.)
+references: [Gatheral (2006)]
+modifiers:
+- kind: adjust_surface
+  curvature_factor: [0.3, 0.6]

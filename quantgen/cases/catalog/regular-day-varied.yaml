@@ -1,0 +1,18 @@
+id: regular-day-varied
+title: Regular day, varied
+tier: observed
+family: observed
+summary: Volatility, flow and TELLURIUM jump rate vary across their observed day-to-day range.
+description: Each product's volatility and taker rate are drawn per seed within the spread seen across days -2,
+  -1 and 0 (100-tick volatility 0.82-1.37x and print counts 0.63-1.32x of the three-day mean).
+references: [QuantiFi Prices and Trades EDA reports (day-to-day variation)]
+modifiers:
+- kind: scale_volatility
+  products: ['@diffusive']
+  factor: [0.85, 1.15]
+- kind: scale_flow
+  products: ['@all']
+  factor: [0.75, 1.3]
+- kind: scale_jumps
+  products: [TELLURIUM]
+  rate_factor: [0.8, 1.3]

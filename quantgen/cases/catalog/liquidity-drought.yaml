@@ -1,0 +1,14 @@
+id: liquidity-drought
+title: Liquidity drought
+tier: plausible
+family: microstructure
+summary: Book volumes and taker arrivals halve on every product.
+description: Passive orders fill half as often and aggressive orders find half the size at the touch.
+references: [Brunnermeier & Pedersen (2009)]
+modifiers:
+- kind: scale_book
+  products: ['@all']
+  volume_factor: 0.5
+- kind: scale_flow
+  products: ['@all']
+  factor: 0.5

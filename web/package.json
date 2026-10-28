@@ -1,0 +1,48 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:py": "uv run --project .. python scripts/build_python.py",
+    "build:worker": "node scripts/build-worker.mjs",
+    "predev": "npm run build:py && npm run build:worker",
+    "dev": "next dev",
+    "prebuild": "npm run build:py && npm run build:worker",
+    "build": "next build",
+    "start": "npx serve@14.2.6 out",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:coverage": "vitest run --project unit --coverage",
+    "test:parity": "vitest run --project parity",
+    "e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "idb": "8.0.4",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "uplot": "1.6.32"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.3.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "4.1.12",
+    "esbuild": "0.28.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "fake-indexeddb": "6.0.1",
+    "jsdom": "26.1.0",
+    "prettier": "3.9.10",
+    "pyodide": "314.0.7",
+    "typescript": "^5",
+    "vitest": "4.1.12"
+  }
+}

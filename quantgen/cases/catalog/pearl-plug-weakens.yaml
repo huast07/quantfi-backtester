@@ -1,0 +1,12 @@
+id: pearl-plug-weakens
+title: Pearl plug weakens
+tier: plausible
+family: structure
+summary: PINK_PEARLS restores the pearl sum less often and only partly, so deviations last longer.
+description: PINK's restoring jumps are 70% less likely and half as large.
+references: [Shleifer & Vishny (1997)]
+modifiers:
+- kind: scale_plug
+  products: ['@plugs']
+  hazard_factor: 0.3
+  slope_factor: 0.5

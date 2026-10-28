@@ -1,0 +1,12 @@
+id: golden-continues
+title: GOLDEN_PEARLS keeps falling
+tier: plausible
+family: structure
+summary: GOLDEN_PEARLS steps down two or three times.
+description: 'The open question from the Prices report resolved one way: the downward steps speed up. WHITE and
+  BLACK absorb each step as on the real days.'
+references: ['QuantiFi Prices report, open question']
+modifiers:
+- kind: set_steps
+  products: [GOLDEN_PEARLS]
+  daily_counts: [2, 3]

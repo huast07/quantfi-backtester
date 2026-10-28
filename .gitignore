@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+.DS_Store
+.coverage
+.pytest_cache/
+.ruff_cache/
+dist/
+# Local experiments and test strategies
+.scratch/

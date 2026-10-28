@@ -1,0 +1,12 @@
+id: intraday-seasonality
+title: Intraday seasonality
+tier: plausible
+family: dynamics
+summary: 'U-shaped day: more volatility and taker flow near the open and close, quieter mid-day.'
+description: Variance and arrival rates follow a U-shaped profile, about 1.8x average at the open and close and
+  0.6x at mid-day, with the daily average unchanged.
+references: [Admati & Pfleiderer (1988), Andersen & Bollerslev (1997)]
+modifiers:
+- kind: intraday_profile
+  products: ['@all']
+  amplitude: 1.2

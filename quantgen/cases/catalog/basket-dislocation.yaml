@@ -1,0 +1,19 @@
+id: basket-dislocation
+title: Basket dislocation
+tier: plausible
+family: structure
+summary: The FRUIT_BASKET premium trends far from normal for a few thousand ticks, then snaps back.
+description: The basket drifts 150-300 away from 2 DRAGONFRUIT + 3 GRANADILLA + 1 MANGOSTEEN over 1,500-3,000 ticks
+  and returns within 200 ticks. Convergence traders must survive the drawdown.
+references: ['Gatev, Goetzmann & Rouwenhorst (2006)', Mitchell & Pulvino (2001)]
+modifiers:
+- kind: shock
+  products: [FRUIT_BASKET]
+  size: [150, 300]
+  relative: false
+  direction: random
+  ramp_ticks: [1500, 3000]
+  hold_ticks: [0, 500]
+  recovery: 1.0
+  recovery_ticks: [20, 200]
+event_window: [0.1, 0.4]

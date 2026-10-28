@@ -1,0 +1,11 @@
+id: tellurium-informed
+title: TELLURIUM informed flow
+tier: plausible
+family: microstructure
+summary: TELLURIUM's jump chasers start 100 ticks before each jump instead of after it.
+description: Directional TELLURIUM flow now leads the jumps, so following the flow pays and fading it is punished.
+references: ['QuantiFi Trades report, open question', 'Easley, Kiefer, O''Hara & Paperman (1996)']
+modifiers:
+- kind: chase_lead
+  products: [TELLURIUM]
+  lead_ticks: 100

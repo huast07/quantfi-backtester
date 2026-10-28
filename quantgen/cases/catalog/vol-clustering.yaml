@@ -1,0 +1,12 @@
+id: vol-clustering
+title: Volatility clustering
+tier: plausible
+family: dynamics
+summary: Calm and turbulent stretches alternate (GARCH), with the same average volatility.
+description: Each product's variance follows a GARCH(1,1) process driven by its own moves, so big moves cluster.
+references: [Engle (1982), Bollerslev (1986), 'Cont (2001), stylized fact 6']
+modifiers:
+- kind: garch
+  products: ['@diffusive']
+  alpha: 0.02
+  beta: 0.975

@@ -1,0 +1,12 @@
+id: opening-gap
+title: Opening gap
+tier: stress
+family: stress
+summary: Day 1 opens 2-6% away from the day 0 close on every diffusive product.
+description: Every day so far opened where the previous one closed. Here each diffusive product gaps in a random
+  direction at the open, and baskets gap with their legs.
+references: ['Lou, Polk & Skouras (2019)']
+modifiers:
+- kind: opening_gap
+  products: ['@diffusive']
+  fraction: [0.02, 0.06]

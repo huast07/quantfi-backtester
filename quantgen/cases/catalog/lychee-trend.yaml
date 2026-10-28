@@ -1,0 +1,13 @@
+id: lychee-trend
+title: LYCHEE trends
+tier: plausible
+family: options
+summary: LYCHEE trends 250-450 in one direction all day, so voucher deltas swing.
+description: A strong trend in the underlying means hedges need frequent rebalancing and out-of-the-money vouchers
+  move in or out of the money.
+references: ['Hull (2018), ch. 19']
+modifiers:
+- kind: set_drift
+  products: [LYCHEE]
+  per_day: [250, 450]
+  random_sign: true

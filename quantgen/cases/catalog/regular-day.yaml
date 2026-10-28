@@ -1,0 +1,9 @@
+id: regular-day
+title: Regular day
+tier: observed
+family: observed
+summary: Every product follows its calibrated behaviour.
+description: Day 1 continues days -2 to 0 with central calibrated parameters. This is the case the generator's fidelity
+  gate checks against the real data.
+references: [QuantiFi Prices and Trades EDA reports]
+modifiers: []

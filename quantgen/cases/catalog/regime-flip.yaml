@@ -1,0 +1,13 @@
+id: regime-flip
+title: Trend regime flip
+tier: plausible
+family: dynamics
+summary: Random-walk products trend one way, then reverse at a random time mid-day.
+description: Each random-walk product trends at 150-400 a day in a random direction until the event, then reverses
+  at the same speed. Trend followers get whipsawed.
+references: [Hamilton (1989)]
+modifiers:
+- kind: trend_reversal
+  products: ['@random_walks']
+  per_day: [150, 400]
+event_window: [0.3, 0.7]

@@ -1,0 +1,11 @@
+id: golden-flat
+title: GOLDEN_PEARLS holds
+tier: plausible
+family: structure
+summary: GOLDEN_PEARLS stays on one plateau all day.
+description: 'The open question from the Prices report resolved the other way: no steps on day 1.'
+references: ['QuantiFi Prices report, open question']
+modifiers:
+- kind: set_steps
+  products: [GOLDEN_PEARLS]
+  daily_counts: [0]

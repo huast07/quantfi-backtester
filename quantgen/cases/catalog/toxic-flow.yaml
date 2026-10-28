@@ -1,0 +1,13 @@
+id: toxic-flow
+title: Toxic flow
+tier: plausible
+family: microstructure
+summary: 30-50% of takers know where the price is going over the next 50 ticks.
+description: Informed takers hit quotes just before the price moves through them, so passive fills are adversely
+  selected.
+references: [Kyle (1985), Glosten & Milgrom (1985), 'Easley, López de Prado & O''Hara (2012)']
+modifiers:
+- kind: informed_flow
+  products: ['@noise_flow']
+  share: [0.3, 0.5]
+  horizon_ticks: 50

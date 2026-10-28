@@ -1,0 +1,44 @@
+.tier,
+.rating {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.tier {
+  border: 1px solid currentColor;
+  background: transparent;
+}
+
+.observed {
+  color: var(--tier-observed);
+}
+
+.plausible {
+  color: var(--tier-plausible);
+}
+
+.stress {
+  color: var(--tier-stress);
+}
+
+.rating.strong {
+  background: var(--strong-soft);
+  color: var(--strong);
+}
+
+.rating.neutral {
+  background: var(--neutral-soft);
+  color: var(--neutral);
+}
+
+.rating.weak {
+  background: var(--weak-soft);
+  color: var(--weak);
+}

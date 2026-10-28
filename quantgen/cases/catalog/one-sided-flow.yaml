@@ -1,0 +1,13 @@
+id: one-sided-flow
+title: One-sided flow
+tier: plausible
+family: microstructure
+summary: Noise takers lean 70-80% to one side on five products.
+description: On JELLY, PEANUT_BUTTER, LYCHEE, DRAGONFRUIT and TOFFEE_CAKE, takers mostly buy or mostly sell all
+  day (direction random per product), so passive inventory builds up one way.
+references: ['Cont, Kukanov & Stoikov (2014)']
+modifiers:
+- kind: set_noise_flow
+  products: [JELLY, PEANUT_BUTTER, LYCHEE, DRAGONFRUIT, TOFFEE_CAKE]
+  buy_prob: [0.7, 0.8]
+  random_side: true

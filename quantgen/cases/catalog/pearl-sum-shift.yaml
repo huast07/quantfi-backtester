@@ -1,0 +1,13 @@
+id: pearl-sum-shift
+title: Pearl total shifts
+tier: plausible
+family: structure
+summary: The five-pearl total moves to a new constant (50,000 +/- 100-200) part-way through the day.
+description: PINK_PEARLS restores the five-pearl sum to a new level from a random time, so a strategy anchored to
+  exactly 50,000 trades against a structural break.
+references: [Perron (1989)]
+modifiers:
+- kind: plug_total_shift
+  products: ['@plugs']
+  size: [100, 200]
+  ramp_ticks: [1, 50]

@@ -1,0 +1,15 @@
+id: anchor-break
+title: AMETHYST anchor break
+tier: stress
+family: stress
+summary: AMETHYST's 10,000 anchor moves permanently by 15-40.
+description: The product that never moved on the real days shifts to a new level and stays. Strategies that buy
+  below 10,000 and sell above keep fighting the new level.
+references: [Perron (1989)]
+modifiers:
+- kind: shock
+  products: [AMETHYST]
+  size: [15, 40]
+  relative: false
+  direction: random
+  ramp_ticks: [1, 20]

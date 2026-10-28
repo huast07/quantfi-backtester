@@ -1,0 +1,15 @@
+id: mean-reversion-decay
+title: Mean reversion decays
+tier: plausible
+family: dynamics
+summary: TOFFEE_CAKE reverts 3-5x more slowly and its anchor drifts.
+description: TOFFEE_CAKE's pull to its mean weakens to 20-35% of normal, and from a random time its anchor drifts
+  by up to 100 a day. Fading TOFFEE moves back to 5,000 stops working reliably.
+references: [Avellaneda & Lee (2010)]
+modifiers:
+- kind: scale_mean_reversion
+  products: [TOFFEE_CAKE]
+  kappa_factor: [0.2, 0.35]
+- kind: drift_change
+  products: [TOFFEE_CAKE]
+  per_day: [-100, 100]

@@ -1,0 +1,12 @@
+id: tellurium-storm
+title: TELLURIUM storm
+tier: stress
+family: stress
+summary: TELLURIUM jumps 2.5x as often and twice as far as ever observed.
+description: About 25 jumps of up to about 600, against 8-13 jumps of up to 300 on the real days.
+references: [Merton (1976), Bates (1996)]
+modifiers:
+- kind: scale_jumps
+  products: [TELLURIUM]
+  rate_factor: 2.5
+  size_factor: 2.0

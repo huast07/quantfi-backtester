@@ -1,0 +1,11 @@
+id: vol-crush
+title: Volatility crush
+tier: plausible
+family: options
+summary: Voucher implied volatility falls to LYCHEE's realised volatility.
+description: 'The variance risk premium disappears: vouchers are priced at realised volatility (about 1.6% a day
+  against about 2% implied on the real days).'
+references: [Carr & Wu (2009)]
+modifiers:
+- kind: adjust_surface
+  realised_iv: true

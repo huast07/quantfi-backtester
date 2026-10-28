@@ -1,0 +1,11 @@
+id: vol-spike-skew
+title: Volatility spike and skew
+tier: plausible
+family: options
+summary: Implied volatility rises 30-60% and the smile's skew steepens.
+description: Vouchers get more expensive across the board, and more so for low strikes.
+references: [Gatheral (2006), Derman (1999)]
+modifiers:
+- kind: adjust_surface
+  iv_factor: [1.3, 1.6]
+  skew_factor: [2.0, 3.0]

@@ -1,0 +1,11 @@
+id: clustered-arrivals
+title: Clustered arrivals
+tier: plausible
+family: microstructure
+summary: Takers arrive in bursts on every product, not just TOFFEE_CAKE and TELLURIUM.
+description: Arrivals cluster (2.5-4 orders per burst on average) at the same average rate.
+references: ['Bacry, Mastromatteo & Muzy (2015)']
+modifiers:
+- kind: set_noise_flow
+  products: ['@noise_flow']
+  cluster_mean: [2.5, 4.0]

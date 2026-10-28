@@ -1,0 +1,35 @@
+id: black-swan-crash
+title: Black swan crash
+tier: stress
+family: stress
+summary: A market-wide crash of 5-15% in seconds, with spreads blowing out and IV spiking, then a partial recovery.
+description: At a random time every diffusive product drops 5-15% within 5-30 ticks, all together. The market maker
+  widens and thins for 500-1,500 ticks, volatility doubles or triples, voucher IV jumps, and 20-50% of the drop
+  recovers over the following 1,000-3,000 ticks.
+references: [Taleb (2007), Longin & Solnik (2001), Roll (1988)]
+modifiers:
+- kind: shock
+  products: ['@diffusive']
+  size: [0.05, 0.15]
+  direction: down
+  ramp_ticks: [5, 30]
+  hold_ticks: [200, 1000]
+  recovery: [0.2, 0.5]
+  recovery_ticks: [1000, 3000]
+- kind: liquidity_window
+  products: ['@all']
+  widen: [2, 4]
+  volume_factor: 0.4
+  level_drop: 0.5
+  flow_factor: 2.0
+  duration_ticks: [500, 1500]
+- kind: vol_window
+  products: ['@diffusive']
+  factor: [2.0, 3.0]
+  duration_ticks: [1000, 2000]
+- kind: iv_shock
+  size: [0.01, 0.02]
+  ramp_ticks: 20
+  hold_ticks: 500
+  recovery: 0.5
+  recovery_ticks: 2000

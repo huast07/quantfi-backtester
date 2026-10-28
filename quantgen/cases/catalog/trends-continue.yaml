@@ -1,0 +1,19 @@
+id: trends-continue
+title: Trends continue
+tier: observed
+family: observed
+summary: 'The multi-day drifts persist: DRAGONFRUIT up, PAPER_LANTERNS down, GOLDEN_PEARLS stepping down.'
+description: DRAGONFRUIT rose about 200 a day and PAPER_LANTERNS fell about 39 a day on all three real days, and
+  GOLDEN_PEARLS stepped down three times. Here those trends carry on through day 1, along with BLUE_PEARLS' calibrated
+  uptrend.
+references: ['QuantiFi Prices report, days -2 to 0']
+modifiers:
+- kind: set_drift
+  products: [DRAGONFRUIT]
+  per_day: 200
+- kind: set_drift
+  products: [PAPER_LANTERNS]
+  per_day: -39
+- kind: set_steps
+  products: [GOLDEN_PEARLS]
+  daily_counts: [1, 2]

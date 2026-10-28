@@ -1,0 +1,18 @@
+id: busy-day
+title: Busy day
+tier: observed
+family: observed
+summary: Volatility and taker flow at the high end of the observed range.
+description: Every product moves and trades as on the busiest of the three real days, including TELLURIUM's 13 jumps
+  on day 0.
+references: [QuantiFi Prices and Trades EDA reports (day-level ranges)]
+modifiers:
+- kind: scale_volatility
+  products: ['@diffusive']
+  factor: 1.15
+- kind: scale_flow
+  products: ['@all']
+  factor: 1.25
+- kind: scale_jumps
+  products: [TELLURIUM]
+  rate_factor: 1.3

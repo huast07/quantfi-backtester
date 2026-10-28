@@ -1,0 +1,100 @@
+/* Saved runs: one card per run with its scores and actions. */
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.notice {
+  margin-bottom: 16px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.run {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 20px;
+}
+
+.runMain {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.runLabel {
+  overflow: hidden;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 20px;
+}
+
+.score {
+  display: grid;
+  justify-items: end;
+  min-width: 0;
+}
+
+.score dt {
+  max-width: 160px;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score dd {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.negative {
+  color: var(--weak);
+}
+
+.runActions {
+  display: flex;
+  gap: 4px;
+}
+
+@media (max-width: 760px) {
+  .run {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .scores {
+    justify-content: flex-start;
+  }
+
+  .score {
+    justify-items: start;
+  }
+}

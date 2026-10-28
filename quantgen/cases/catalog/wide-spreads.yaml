@@ -1,0 +1,11 @@
+id: wide-spreads
+title: Wide spreads
+tier: plausible
+family: microstructure
+summary: The market maker quotes one or two ticks wider per side on every product.
+description: Crossing the spread costs more and there is more room to quote inside it.
+references: [Ho & Stoll (1981)]
+modifiers:
+- kind: scale_book
+  products: ['@all']
+  extra_half_width: [1, 2]

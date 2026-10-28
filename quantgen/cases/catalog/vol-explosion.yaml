@@ -1,0 +1,12 @@
+id: vol-explosion
+title: Volatility explosion
+tier: stress
+family: stress
+summary: Volatility triples on every diffusive product for 500-2,000 ticks.
+description: No change in direction or liquidity, just far larger moves for a while.
+references: [Schwert (1989)]
+modifiers:
+- kind: vol_window
+  products: ['@diffusive']
+  factor: 3.0
+  duration_ticks: [500, 2000]

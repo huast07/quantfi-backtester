@@ -1,0 +1,11 @@
+id: smile-sticky-strike
+title: Sticky-strike smile
+tier: plausible
+family: options
+summary: The smile stays fixed in strike as LYCHEE moves.
+description: Each strike keeps its implied volatility when LYCHEE moves, instead of the smile moving with LYCHEE
+  as fitted on the real days. Hedge ratios computed under the wrong rule mis-hedge.
+references: [Derman (1999)]
+modifiers:
+- kind: adjust_surface
+  sticky_strike: true

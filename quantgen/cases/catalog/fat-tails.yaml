@@ -1,0 +1,12 @@
+id: fat-tails
+title: Fat tails
+tier: plausible
+family: dynamics
+summary: 'Price moves are Student-t (3.5 degrees of freedom): rare large moves, same variance.'
+description: Innovations are multivariate Student-t with unit variance, so correlations are unchanged but single-tick
+  moves of 4-6 sigma happen far more often than under a Gaussian.
+references: [Mandelbrot (1963), 'Cont (2001), stylized fact 2']
+modifiers:
+- kind: fat_tails
+  products: ['@diffusive']
+  dof: 3.5

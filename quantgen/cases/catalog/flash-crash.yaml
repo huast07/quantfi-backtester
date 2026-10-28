@@ -1,0 +1,24 @@
+id: flash-crash
+title: Flash crash
+tier: stress
+family: stress
+summary: One random product collapses 4-10% and fully recovers within about 100 ticks while books thin.
+description: A single random-walk product drops sharply and comes all the way back. During the episode the market
+  maker shows a third of its usual size and quotes wider across the market.
+references: ['Kirilenko, Kyle, Samadi & Tuzun (2017)', CFTC-SEC (2010)]
+modifiers:
+- kind: shock
+  products: ['@random_walks']
+  pick: 1
+  size: [0.04, 0.1]
+  direction: down
+  ramp_ticks: [5, 20]
+  hold_ticks: [0, 30]
+  recovery: 1.0
+  recovery_ticks: [50, 100]
+- kind: liquidity_window
+  products: ['@all']
+  widen: 2
+  volume_factor: 0.3
+  level_drop: 0.5
+  duration_ticks: [100, 150]

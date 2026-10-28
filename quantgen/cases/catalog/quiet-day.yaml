@@ -1,0 +1,17 @@
+id: quiet-day
+title: Quiet day
+tier: observed
+family: observed
+summary: Volatility and taker flow at the low end of the observed range.
+description: Every product moves and trades as on the calmest of the three real days.
+references: [QuantiFi Prices and Trades EDA reports (day-level ranges)]
+modifiers:
+- kind: scale_volatility
+  products: ['@diffusive']
+  factor: 0.88
+- kind: scale_flow
+  products: ['@all']
+  factor: 0.8
+- kind: scale_jumps
+  products: [TELLURIUM]
+  rate_factor: 0.8

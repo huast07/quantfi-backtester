@@ -1,0 +1,22 @@
+id: liquidity-spiral
+title: Liquidity spiral
+tier: stress
+family: stress
+summary: A slow market-wide decline during which the market maker withdraws.
+description: Diffusive products slide 3-8% over 500-1,500 ticks. Meanwhile L1 size drops to 20-40% of normal, outer
+  levels go missing and spreads widen by 2-5 ticks per side.
+references: [Brunnermeier & Pedersen (2009), 'Kirilenko, Kyle, Samadi & Tuzun (2017)']
+modifiers:
+- kind: shock
+  products: ['@diffusive']
+  size: [0.03, 0.08]
+  direction: down
+  ramp_ticks: [500, 1500]
+  recovery: [0.0, 0.2]
+  recovery_ticks: [1000, 2000]
+- kind: liquidity_window
+  products: ['@all']
+  widen: [2, 5]
+  volume_factor: [0.2, 0.4]
+  level_drop: [0.5, 0.8]
+  duration_ticks: [800, 2000]

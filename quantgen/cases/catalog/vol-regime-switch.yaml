@@ -1,0 +1,13 @@
+id: vol-regime-switch
+title: Volatility regime switch
+tier: plausible
+family: dynamics
+summary: A hidden Markov chain switches the market between calm and 3x turbulent volatility.
+description: Turbulent spells last about 500 ticks and take up about a third of the day. Average variance is unchanged.
+references: [Hamilton (1989)]
+modifiers:
+- kind: vol_regimes
+  products: ['@diffusive']
+  turbulent_ratio: 3.0
+  start_prob: 0.001
+  stay_prob: 0.998

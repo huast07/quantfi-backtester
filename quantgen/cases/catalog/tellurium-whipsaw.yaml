@@ -1,0 +1,14 @@
+id: tellurium-whipsaw
+title: TELLURIUM whipsaw
+tier: plausible
+family: dynamics
+summary: TELLURIUM's jumps go both ways within the day instead of mostly one way.
+description: On days -2 and -1 almost every TELLURIUM jump went the same way (7 of 8 down, then 9 of 9 up), but on
+  day 0 they split 6 up and 7 down. The calibrated jump-direction persistence is uncertain (95% interval for the
+  Beta concentration 0.07-5.1 from three days), so this case uses the top of that range. Strategies that hold
+  positions in the direction of the last jump get whipsawed.
+references: [QuantiFi Prices report (TELLURIUM jumps), 'Merton (1976)']
+modifiers:
+- kind: scale_jumps
+  products: [TELLURIUM]
+  direction_concentration: 5.0
