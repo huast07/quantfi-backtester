@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "curl -LsSf https://astral.sh/uv/0.11.24/install.sh | env UV_NO_MODIFY_PATH=1 sh && npm ci",
-  "buildCommand": "PATH=\"$HOME/.local/bin:$PATH\" npm run build",
-  "outputDirectory": "out"
+  "buildCommand": "PATH=\"$HOME/.local/bin:$PATH\" npm run build"
 }
