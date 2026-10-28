@@ -9,7 +9,10 @@ const day = vi.hoisted(() => ({ download: vi.fn() }));
 
 vi.mock("@/lib/case-day", () => ({ downloadCaseDay: day.download }));
 
-const cards = () => screen.queryAllByRole("group").filter((el) => el.tagName === "DETAILS");
+// Cheap queries on purpose: role and label lookups walk all 42 cards, slow enough in jsdom to time out under load.
+const cards = () => [...document.querySelectorAll("details")];
+const filter = (name: string) => screen.getByText(name, { selector: "button" });
+const search = () => screen.getByPlaceholderText("Search cases, products or authors");
 
 describe("CasesPage", () => {
   test("lists every case grouped by tier", () => {
@@ -27,16 +30,16 @@ describe("CasesPage", () => {
     render(<CasesPage />);
 
     // Act
-    fireEvent.click(screen.getByRole("button", { name: "Stress" }));
+    fireEvent.click(filter("Stress"));
 
     // Assert
     expect(cards()).toHaveLength(catalog.cases.filter((c) => c.tier === "stress").length);
 
-    fireEvent.click(screen.getByRole("button", { name: "All" }));
-    fireEvent.change(screen.getByLabelText("Search cases"), { target: { value: "gatev 2006" } });
+    fireEvent.click(filter("All"));
+    fireEvent.change(search(), { target: { value: "gatev 2006" } });
     expect(cards().map((card) => card.id)).toContain("basket-dislocation");
 
-    fireEvent.change(screen.getByLabelText("Search cases"), { target: { value: "no such thing" } });
+    fireEvent.change(search(), { target: { value: "no such thing" } });
     expect(screen.getByText("No case matches that search.")).toBeInTheDocument();
   });
 
