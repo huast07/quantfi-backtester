@@ -2,7 +2,7 @@
 
 Backtest QuantiFi competition strategies on synthetic **day 1** markets before day 1 exists.
 
-**Live site:** https://web-khaki-chi-52.vercel.app
+**Live site:** [https://quantfi-backtester.vercel.app/]
 
 Upload one or more `trader.py` files, and each one runs through the unmodified [`prosperity3bt`](https://pypi.org/project/prosperity3bt/) 0.12.0 engine on a catalogue of 42 synthetic day-1 markets.
 Each market is a named **case**: a regular day, a volatility crush, a TELLURIUM storm, a black swan crash, and so on.
